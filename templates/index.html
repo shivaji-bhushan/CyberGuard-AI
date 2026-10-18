@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberGuard AI — Unified Cyber Defense Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="editorial-theme">
+
+  <!-- Primary Application Navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <a href="#overview" class="brand-link">
+          <span class="brand-symbol">
+            <i class="fa-solid fa-shield-halved"></i>
+          </span>
+          <span class="brand-text">CyberGuard<span class="brand-accent">AI</span></span>
+        </a>
+      </div>
+
+      <nav class="header-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#overview" class="nav-item active">Overview</a></li>
+          <li><a href="#scenarios" class="nav-item">Attack Scenarios</a></li>
+          <li><a href="#scanner" class="nav-item">Security Scanner</a></li>
+          <li><a href="#results" class="nav-item">Analysis & Risk</a></li>
+          <li><a href="#incidents" class="nav-item">Incidents</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-utility">
+        <div class="engine-status" title="CyberGuard AI Brain Engine Status">
+          <span class="status-indicator online"></span>
+          <span class="status-text">Engine Online</span>
+          <span class="status-port">Port 5050</span>
+        </div>
+        <a href="#scanner" class="btn btn-primary btn-sm">
+          <span>New Investigation</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Editorial Content Area -->
+  <main class="page-body">
+
+    <!-- SECTION 1: Security Overview & Executive Metrics -->
+    <section class="section section-overview" id="overview">
+      <div class="section-container">
+        <div class="overview-hero">
+          <div class="hero-copy">
+            <span class="eyebrow">Enterprise Threat Posture</span>
+            <h1 class="hero-title">Security overview</h1>
+            <p class="hero-description">
+              Monitor active threats, investigate suspicious multi-vector activity, and understand your cross-threat defense posture in real time.
+            </p>
+          </div>
+          <div class="hero-actions">
+            <button class="btn btn-outline btn-sm" id="btnRefreshOverview" title="Refresh Telemetry">
+              <i class="fa-solid fa-arrow-rotate-right"></i>
+              <span>Refresh data</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Executive Metrics Row -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-label">Security Posture</div>
+            <div class="metric-value-wrap">
+              <span class="metric-value text-emerald" id="statPostureText">Optimal</span>
+            </div>
+            <div class="metric-meta" id="statPostureDesc">All systems conforming to verified safety baseline.</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-label">Events Analyzed</div>
+            <div class="metric-value-wrap">
+              <span class="metric-value" id="statEventsCount">0</span>
+            </div>
+            <div class="metric-meta">Total events processed across defense engines.</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-label">Active Threats Blocked</div>
+            <div class="metric-value-wrap">
+              <span class="metric-value text-rose" id="statThreatsCount">0</span>
+            </div>
+            <div class="metric-meta">Malicious domains, fake VPAs, and C2 ports contained.</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-label">Incidents Flagged</div>
+            <div class="metric-value-wrap">
+              <span class="metric-value" id="statFlaggedCount">0</span>
+            </div>
+            <div class="metric-meta">Transactions & connections logged for review.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Attack Scenario Explorer -->
+    <section class="section section-scenarios" id="scenarios">
+      <div class="section-container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Interactive Threat Simulation</span>
+            <h2 class="section-title">Attack scenario explorer</h2>
+            <p class="section-subtitle">
+              Test how cross-vector correlation links isolated signals across phishing lures, payment fraud, and network sockets into a unified threat chain.
+            </p>
+          </div>
+        </div>
+
+        <!-- Editorial Asymmetric Layout: Featured Scenario + Compact List -->
+        <div class="scenarios-layout">
+          <!-- Featured Scenario (Left) -->
+          <div class="scenario-featured" data-scenario="electricity_scam">
+            <div class="scenario-badge-row">
+              <span class="badge badge-featured">Featured Simulation</span>
+              <span class="badge badge-danger">Critical Threat Chain</span>
+            </div>
+            <h3 class="featured-title">Electricity Bill Power-Cut Trap</h3>
+            <p class="featured-narrative">
+              Attackers dispatch urgent SMS lures threatening immediate power cutoff tonight. The embedded link directs victims to a deceptive web portal, presents a reverse UPI PIN collect trap, and maintains an active Metasploit command-and-control backdoor on port 4444.
+            </p>
+
+            <div class="killchain-flow">
+              <div class="killchain-step">
+                <span class="step-num">1</span>
+                <span class="step-label">Urgent SMS Hook</span>
+              </div>
+              <span class="flow-arrow">&rarr;</span>
+              <div class="killchain-step">
+                <span class="step-num">2</span>
+                <span class="step-label">Fake Utility Portal</span>
+              </div>
+              <span class="flow-arrow">&rarr;</span>
+              <div class="killchain-step">
+                <span class="step-num">3</span>
+                <span class="step-label">Reverse PIN Collect</span>
+              </div>
+              <span class="flow-arrow">&rarr;</span>
+              <div class="killchain-step">
+                <span class="step-num">4</span>
+                <span class="step-label">C2 Socket (Port 4444)</span>
+              </div>
+            </div>
+
+            <div class="scenario-footer">
+              <button class="btn btn-primary btn-scenario" data-scenario="electricity_scam">
+                <i class="fa-solid fa-play"></i>
+                <span>Simulate Electricity Scam</span>
+              </button>
+              <span class="scenario-meta-note">Populates live scanner and triggers unified AI Brain correlation.</span>
+            </div>
+          </div>
+
+          <!-- Secondary Scenarios (Right Column) -->
+          <div class="scenarios-list">
+            <!-- Scenario 2: SBI KYC -->
+            <div class="scenario-row-card" data-scenario="bank_kyc_trap">
+              <div class="row-header">
+                <div>
+                  <h4 class="row-title">SBI Account Suspension Scam</h4>
+                  <p class="row-desc">PAN card expiry bait with typosquatted bank domain, fraudulent collect request, and tunnel exfiltration.</p>
+                </div>
+                <span class="badge badge-danger">Critical</span>
+              </div>
+              <div class="row-footer">
+                <div class="row-tags">
+                  <span class="tag-pill">Brand Spoof</span>
+                  <span class="tag-pill">Fake Support VPA</span>
+                  <span class="tag-pill">Port 1337</span>
+                </div>
+                <button class="btn btn-outline btn-xs btn-scenario" data-scenario="bank_kyc_trap">
+                  <span>Run simulation</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Scenario 3: Crypto Drainer -->
+            <div class="scenario-row-card" data-scenario="crypto_drain">
+              <div class="row-header">
+                <div>
+                  <h4 class="row-title">Crypto Airdrop QR Trojan</h4>
+                  <p class="row-desc">Deceptive 1.5 ETH prize claim pairing reverse PIN collection with high-entropy DNS tunneling exfiltration.</p>
+                </div>
+                <span class="badge badge-warning">High Risk</span>
+              </div>
+              <div class="row-footer">
+                <div class="row-tags">
+                  <span class="tag-pill">Airdrop Lure</span>
+                  <span class="tag-pill">Deceptive QR</span>
+                  <span class="tag-pill">DNS Tunnel</span>
+                </div>
+                <button class="btn btn-outline btn-xs btn-scenario" data-scenario="crypto_drain">
+                  <span>Run simulation</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Scenario 4: Legitimate Corporate Baseline -->
+            <div class="scenario-row-card safe-row" data-scenario="safe_baseline">
+              <div class="row-header">
+                <div>
+                  <h4 class="row-title">Legitimate Corporate Activity (Baseline)</h4>
+                  <p class="row-desc">Routine enterprise workday workflow consisting of Google Workspace webmail, verified coffee payment, and standard TLS web traffic.</p>
+                </div>
+                <span class="badge badge-safe">Verified Safe</span>
+              </div>
+              <div class="row-footer">
+                <div class="row-tags">
+                  <span class="tag-pill">Google Mail</span>
+                  <span class="tag-pill">Verified Merchant</span>
+                  <span class="tag-pill">HTTPS (443)</span>
+                </div>
+                <button class="btn btn-outline btn-xs btn-scenario" data-scenario="safe_baseline">
+                  <span>Run baseline</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Multi-Vector Security Scanner (Core Workspace) -->
+    <section class="section section-scanner" id="scanner">
+      <div class="section-container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Investigation Workspace</span>
+            <h2 class="section-title">Security scanner</h2>
+            <p class="section-subtitle">
+              Submit suspicious indicators across communication, digital payments, and network telemetry for comprehensive cross-threat inspection.
+            </p>
+          </div>
+
+          <!-- Investigation Mode Switcher -->
+          <div class="mode-switcher" role="tablist">
+            <button class="mode-tab active" data-tab="unified" role="tab">
+              <span>Unified Analysis</span>
+            </button>
+            <button class="mode-tab" data-tab="phish" role="tab">
+              <span>Phishing & URLs</span>
+            </button>
+            <button class="mode-tab" data-tab="upi" role="tab">
+              <span>Payment Fraud</span>
+            </button>
+            <button class="mode-tab" data-tab="net" role="tab">
+              <span>Network Telemetry</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="workspace-container">
+          <!-- TAB 1: Unified Multi-Vector Workspace -->
+          <div class="workspace-pane active" id="paneUnified">
+            <form id="formUnifiedInvestigation" class="investigation-form">
+
+              <!-- Group 1: Phishing & Communication Indicators -->
+              <div class="investigation-group">
+                <div class="group-header">
+                  <div class="group-title-wrap">
+                    <span class="group-num">01</span>
+                    <div>
+                      <h4 class="group-title">Phishing & Communication Telemetry</h4>
+                      <p class="group-desc">Analyzes URLs, domain entropy, brand typosquatting, and social-engineering psychological triggers.</p>
+                    </div>
+                  </div>
+                  <div class="sample-actions">
+                    <span class="sample-hint">Fill sample:</span>
+                    <button type="button" class="sample-btn" data-fill="phish-power">Power Bill</button>
+                    <button type="button" class="sample-btn" data-fill="phish-sbi">SBI KYC</button>
+                    <button type="button" class="sample-btn" data-fill="phish-safe">Google Mail</button>
+                  </div>
+                </div>
+
+                <div class="field-grid">
+                  <div class="field-col full">
+                    <label for="inputPhishUrl">Target URL or Suspicious Domain</label>
+                    <input type="text" id="inputPhishUrl" class="form-input" placeholder="e.g. http://power-bill-update.xyz/pay-online" value="http://power-bill-update.xyz/pay-online">
+                  </div>
+                  <div class="field-col full">
+                    <label for="inputPhishText">SMS, Email, or Social Engineering Message Content</label>
+                    <textarea id="inputPhishText" class="form-textarea" rows="2" placeholder="Paste the message text here...">Dear customer your electricity power will be disconnected tonight 9:30 PM due to unpaid bill. Call 9876543210 or pay immediately at http://power-bill-update.xyz</textarea>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Group 2: UPI & Digital Payment Indicators -->
+              <div class="investigation-group">
+                <div class="group-header">
+                  <div class="group-title-wrap">
+                    <span class="group-num">02</span>
+                    <div>
+                      <h4 class="group-title">UPI & Digital Payment Telemetry</h4>
+                      <p class="group-desc">Validates NPCI PSP handles, detects deceptive merchant prefixes, and catches reverse collect PIN traps.</p>
+                    </div>
+                  </div>
+                  <div class="sample-actions">
+                    <span class="sample-hint">Fill sample:</span>
+                    <button type="button" class="sample-btn" data-fill="upi-power">MahaDiscom</button>
+                    <button type="button" class="sample-btn" data-fill="upi-sbi">Fake SBI VPA</button>
+                    <button type="button" class="sample-btn" data-fill="upi-safe">Starbucks</button>
+                  </div>
+                </div>
+
+                <div class="field-grid">
+                  <div class="field-col col-8">
+                    <label for="inputUpiVpa">Virtual Payment Address (UPI ID / VPA)</label>
+                    <input type="text" id="inputUpiVpa" class="form-input" placeholder="e.g. mahadiscom.billdesk@paytm" value="mahadiscom.billdesk@paytm">
+                  </div>
+                  <div class="field-col col-4">
+                    <label for="inputUpiAmount">Requested Amount (₹ INR)</label>
+                    <input type="number" id="inputUpiAmount" class="form-input" step="0.01" value="1480.00">
+                  </div>
+                  <div class="field-col full">
+                    <label for="inputUpiContext">Payment Context Note & Instructions</label>
+                    <input type="text" id="inputUpiContext" class="form-input" placeholder="e.g. Enter your UPI PIN to claim subsidy refund" value="URGENT: Enter your UPI PIN to verify transaction and receive electricity subsidy refund">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Group 3: Network & Endpoint Telemetry -->
+              <div class="investigation-group">
+                <div class="group-header">
+                  <div class="group-title-wrap">
+                    <span class="group-num">03</span>
+                    <div>
+                      <h4 class="group-title">Network Socket & C2 Telemetry</h4>
+                      <p class="group-desc">Monitors high-risk backdoor ports, periodic C2 beaconing heartbeats, and DNS tunneling exfiltration.</p>
+                    </div>
+                  </div>
+                  <div class="sample-actions">
+                    <span class="sample-hint">Fill sample:</span>
+                    <button type="button" class="sample-btn" data-fill="net-c2">Port 4444 (RAT)</button>
+                    <button type="button" class="sample-btn" data-fill="net-tunnel">DNS Tunnel</button>
+                    <button type="button" class="sample-btn" data-fill="net-safe">HTTPS 443</button>
+                  </div>
+                </div>
+
+                <div class="field-grid">
+                  <div class="field-col col-5">
+                    <label for="inputNetIp">Destination Remote IP</label>
+                    <input type="text" id="inputNetIp" class="form-input font-code" value="185.220.101.5">
+                  </div>
+                  <div class="field-col col-4">
+                    <label for="inputNetPort">Remote Port</label>
+                    <input type="number" id="inputNetPort" class="form-input font-code" value="4444">
+                  </div>
+                  <div class="field-col col-3">
+                    <label for="inputNetProtocol">Protocol</label>
+                    <select id="inputNetProtocol" class="form-select font-code">
+                      <option value="TCP" selected>TCP</option>
+                      <option value="UDP">UDP</option>
+                    </select>
+                  </div>
+                  <div class="field-col col-6">
+                    <label for="inputNetBeacons">Beacon Arrival Intervals (sec, comma separated)</label>
+                    <input type="text" id="inputNetBeacons" class="form-input font-code" value="5.01, 4.99, 5.02, 5.00, 4.98, 5.01">
+                  </div>
+                  <div class="field-col col-6">
+                    <label for="inputNetDns">Associated DNS Query (Tunneling telemetry)</label>
+                    <input type="text" id="inputNetDns" class="form-input font-code" value="c2.power-bill-update.xyz">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Form Submit Bar -->
+              <div class="investigation-actions">
+                <button type="submit" class="btn btn-primary" id="btnSubmitUnified">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <span>Run security analysis</span>
+                </button>
+                <button type="button" class="btn btn-outline" id="btnResetUnified">
+                  <span>Clear form</span>
+                </button>
+                <div class="actions-hint">
+                  <i class="fa-regular fa-keyboard"></i>
+                  <span>Press <kbd>Ctrl</kbd> + <kbd>Enter</kbd> to analyze</span>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- TAB 2: PhishShield Only -->
+          <div class="workspace-pane" id="panePhish">
+            <form id="formSpecialistPhish" class="investigation-form">
+              <div class="investigation-group">
+                <div class="group-header">
+                  <div class="group-title-wrap">
+                    <div>
+                      <h4 class="group-title">PhishShield Vector Inspection</h4>
+                      <p class="group-desc">Examines URL structure, domain entropy, homoglyph punycode, and psychological urgency lures.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="field-grid">
+                  <div class="field-col full">
+                    <label for="sPhishUrl">Target URL or Domain</label>
+                    <input type="text" id="sPhishUrl" class="form-input" placeholder="https://secure-login-hdfcbank.com/auth">
+                  </div>
+                  <div class="field-col full">
+                    <label for="sPhishText">Accompanying Message or Email Text</label>
+                    <textarea id="sPhishText" class="form-textarea" rows="4" placeholder="Paste the message content here..."></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="investigation-actions">
+                <button type="submit" class="btn btn-primary">
+                  <i class="fa-solid fa-shield-virus"></i>
+                  <span>Inspect Phishing Vector</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- TAB 3: UPI Shield Only -->
+          <div class="workspace-pane" id="paneUpi">
+            <form id="formSpecialistUpi" class="investigation-form">
+              <div class="investigation-group">
+                <div class="group-header">
+                  <div class="group-title-wrap">
+                    <div>
+                      <h4 class="group-title">UPI Shield Vector Inspection</h4>
+                      <p class="group-desc">Detects fraudulent VPA handles, unauthorized collect requests, and decoded QR payment parameters.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="field-grid">
+                  <div class="field-col col-8">
+                    <label for="sUpiVpa">Virtual Payment Address (VPA)</label>
+                    <input type="text" id="sUpiVpa" class="form-input" placeholder="sbi.customer.support@okaxis">
+                  </div>
+                  <div class="field-col col-4">
+                    <label for="sUpiAmount">Amount (₹ INR)</label>
+                    <input type="number" id="sUpiAmount" class="form-input" placeholder="2500">
+                  </div>
+                  <div class="field-col full">
+                    <label for="sUpiContext">Payment Context / Reverse Collect Prompt</label>
+                    <input type="text" id="sUpiContext" class="form-input" placeholder="e.g. Enter your UPI PIN to claim ₹2,500 cash reward">
+                  </div>
+                  <div class="field-col full">
+                    <label for="sUpiQr">Raw UPI QR URI (Optional)</label>
+                    <input type="text" id="sUpiQr" class="form-input font-code" placeholder="upi://pay?pa=...&pn=...">
+                  </div>
+                </div>
+              </div>
+              <div class="investigation-actions">
+                <button type="submit" class="btn btn-primary">
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                  <span>Inspect UPI Vector</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- TAB 4: NetSentinel Only -->
+          <div class="workspace-pane" id="paneNet">
+            <form id="formSpecialistNet" class="investigation-form">
+              <div class="investigation-group">
+                <div class="group-header">
+                  <div class="group-title-wrap">
+                    <div>
+                      <h4 class="group-title">NetSentinel Vector Inspection</h4>
+                      <p class="group-desc">Profiles socket destinations, calculates periodic beacon jitter, and audits high-entropy DNS tunneling.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="field-grid">
+                  <div class="field-col col-5">
+                    <label for="sNetIp">Destination IP</label>
+                    <input type="text" id="sNetIp" class="form-input font-code" placeholder="45.142.122.99">
+                  </div>
+                  <div class="field-col col-4">
+                    <label for="sNetPort">Target Port</label>
+                    <input type="number" id="sNetPort" class="form-input font-code" placeholder="4444">
+                  </div>
+                  <div class="field-col col-3">
+                    <label for="sNetProtocol">Protocol</label>
+                    <select id="sNetProtocol" class="form-select font-code">
+                      <option value="TCP">TCP</option>
+                      <option value="UDP">UDP</option>
+                    </select>
+                  </div>
+                  <div class="field-col col-6">
+                    <label for="sNetBeacons">Beacon Intervals (seconds)</label>
+                    <input type="text" id="sNetBeacons" class="form-input font-code" placeholder="10.0, 10.1, 9.9">
+                  </div>
+                  <div class="field-col col-6">
+                    <label for="sNetDns">DNS Query Domain</label>
+                    <input type="text" id="sNetDns" class="form-input font-code" placeholder="tunnel.payload.cc">
+                  </div>
+                </div>
+              </div>
+              <div class="investigation-actions">
+                <button type="submit" class="btn btn-primary">
+                  <i class="fa-solid fa-network-wired"></i>
+                  <span>Inspect Network Vector</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Investigation Results, Risk Analysis & Attack Sequence -->
+    <section class="section section-results" id="results">
+      <div class="section-container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Analysis & Decision</span>
+            <h2 class="section-title">Investigation results</h2>
+            <p class="section-subtitle">
+              Comprehensive threat synthesis, composite risk score, correlated evidence anchors, and automated containment policy.
+            </p>
+          </div>
+          <span class="incident-stamp" id="resultIncidentId">CG-STANDBY</span>
+        </div>
+
+        <!-- Explicit Empty State (When no scan has been executed) -->
+        <div class="results-empty-state" id="resultsEmptyState">
+          <div class="empty-state-symbol">
+            <i class="fa-solid fa-radar"></i>
+          </div>
+          <h3 class="empty-state-title">Awaiting investigation telemetry</h3>
+          <p class="empty-state-text">
+            No active analysis has been run in this session. Enter suspicious parameters into the scanner above or select an attack scenario from the explorer to calculate composite risk and view automated response policies.
+          </p>
+          <div class="empty-state-cta">
+            <button class="btn btn-outline btn-sm" id="btnQuickDemo">
+              <span>Load sample scenario</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Active Investigation Results Content (Shown after a scan) -->
+        <div class="results-active-content" id="resultsActiveContent" style="display: none;">
+
+          <!-- Policy Decision Banner -->
+          <div class="decision-banner" id="decisionBanner">
+            <div class="decision-left">
+              <div class="decision-symbol-box" id="decisionSymbolBox">
+                <i class="fa-solid fa-shield-halved" id="decisionIcon"></i>
+              </div>
+              <div>
+                <span class="decision-kicker" id="decisionKicker">ENFORCED RESPONSE POLICY</span>
+                <h3 class="decision-headline" id="decisionTitle">PROTOCOL LOCKDOWN ENGAGED</h3>
+              </div>
+            </div>
+            <div class="decision-right">
+              <span class="severity-pill" id="decisionSeverityPill">CRITICAL SEVERITY</span>
+            </div>
+          </div>
+
+          <!-- Executive Summary -->
+          <div class="diagnosis-callout">
+            <div class="callout-label">AI Security Diagnosis</div>
+            <p class="callout-body" id="diagnosisSummaryText">
+              Coordinated multi-vector breach identified. Urgent social-engineering lure directly coupled with financial exfiltration and active command-and-control connection.
+            </p>
+          </div>
+
+          <!-- Two Column Results Grid: Risk Score + Contributing Signals -->
+          <div class="results-grid">
+            <!-- Left: Composite Risk Index -->
+            <div class="result-tile">
+              <div class="tile-header">
+                <h4 class="tile-title">Composite Risk Index</h4>
+                <span class="tile-sub">0–100 Normalized Scale</span>
+              </div>
+
+              <div class="risk-meter-display">
+                <div class="risk-score-huge" id="compositeScoreNumber">0</div>
+                <div class="risk-score-details">
+                  <div class="risk-meter-track">
+                    <div class="risk-meter-fill" id="riskMeterFill" style="width: 0%;"></div>
+                  </div>
+                  <div class="risk-scale-labels">
+                    <span>0 Safe</span>
+                    <span>35 Low</span>
+                    <span>65 High</span>
+                    <span>85 Critical</span>
+                    <span>100</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="score-breakdown-row">
+                <div class="breakdown-stat">
+                  <span class="stat-label">Baseline Average</span>
+                  <span class="stat-num" id="statBaselineAvg">0.0</span>
+                </div>
+                <div class="breakdown-divider"></div>
+                <div class="breakdown-stat">
+                  <span class="stat-label">Correlation Boost</span>
+                  <span class="stat-num text-indigo" id="statCorrelationBoost">+0 pts</span>
+                </div>
+                <div class="breakdown-divider"></div>
+                <div class="breakdown-stat">
+                  <span class="stat-label">Enforced Action</span>
+                  <span class="stat-num" id="statActionCode">ALLOW</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Correlated Evidence Anchors -->
+            <div class="result-tile" id="tileCorrelations">
+              <div class="tile-header">
+                <h4 class="tile-title">Cross-Threat Evidence Anchors</h4>
+                <span class="badge badge-info" id="correlationsCountBadge">0 Links Found</span>
+              </div>
+
+              <div class="evidence-list" id="evidenceItemsContainer">
+                <p class="text-muted" style="font-size: 13px;">No multi-vector correlation detected.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Automated Containment Actions Checklist -->
+          <div class="containment-tile" id="containmentTile">
+            <div class="tile-header">
+              <div class="header-with-icon">
+                <i class="fa-solid fa-lock text-rose"></i>
+                <h4 class="tile-title">Automated Defensive Countermeasures</h4>
+              </div>
+              <span class="action-status-tag"><i class="fa-solid fa-circle-check"></i> Enforced by Policy Engine</span>
+            </div>
+            <div class="actions-checklist" id="enforcedActionsList"></div>
+          </div>
+
+          <!-- Specialist Defense Engines Breakdown -->
+          <div class="specialist-grid">
+            <div class="specialist-card" id="specPhishCard">
+              <div class="spec-card-top">
+                <span class="spec-name">PhishShield</span>
+                <span class="spec-score" id="specPhishScore">--</span>
+              </div>
+              <div class="spec-verdict" id="specPhishVerdict">Not Evaluated</div>
+              <ul class="spec-flags" id="specPhishFlags"></ul>
+            </div>
+
+            <div class="specialist-card" id="specUpiCard">
+              <div class="spec-card-top">
+                <span class="spec-name">UPI Shield</span>
+                <span class="spec-score" id="specUpiScore">--</span>
+              </div>
+              <div class="spec-verdict" id="specUpiVerdict">Not Evaluated</div>
+              <ul class="spec-flags" id="specUpiFlags"></ul>
+            </div>
+
+            <div class="specialist-card" id="specNetCard">
+              <div class="spec-card-top">
+                <span class="spec-name">NetSentinel</span>
+                <span class="spec-score" id="specNetScore">--</span>
+              </div>
+              <div class="spec-verdict" id="specNetVerdict">Not Evaluated</div>
+              <ul class="spec-flags" id="specNetFlags"></ul>
+            </div>
+          </div>
+
+          <!-- Attack Chain Investigation Flow -->
+          <div class="attack-chain-tile">
+            <div class="tile-header">
+              <div>
+                <h4 class="tile-title">Cross-Threat Attack Chain Sequence</h4>
+                <p class="tile-sub">Chronological killchain progression synthesized by CyberGuard Brain</p>
+              </div>
+            </div>
+
+            <div class="chain-timeline" id="chainTimeline">
+              <!-- Rendered dynamically by app.js -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Security Incident Audit Log -->
+    <section class="section section-incidents" id="incidents">
+      <div class="section-container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Audit Trail</span>
+            <h2 class="section-title">Security incident log</h2>
+            <p class="section-subtitle">
+              Chronological log of recent security assessments, automated policy enforcement decisions, and threat telemetry.
+            </p>
+          </div>
+
+          <!-- Table Filter Tabs -->
+          <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">All Incidents</button>
+            <button class="filter-btn" data-filter="threats">Threats Only</button>
+            <button class="filter-btn" data-filter="safe">Safe Events</button>
+          </div>
+        </div>
+
+        <div class="table-card">
+          <div class="table-responsive">
+            <table class="editorial-table">
+              <thead>
+                <tr>
+                  <th scope="col">Incident ID</th>
+                  <th scope="col">Assessment Title</th>
+                  <th scope="col">Risk Index</th>
+                  <th scope="col">Enforced Policy</th>
+                  <th scope="col">Timestamp</th>
+                  <th scope="col" style="text-align: right;">Action</th>
+                </tr>
+              </thead>
+              <tbody id="incidentTableBody">
+                <tr class="empty-table-row">
+                  <td colspan="6">
+                    <div class="table-empty-message">
+                      <i class="fa-regular fa-clipboard"></i>
+                      <span>No incidents registered yet. Run an inspection in the scanner.</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Editorial Product Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-primary">
+        <div class="footer-brand">
+          <span class="footer-symbol"><i class="fa-solid fa-shield-halved"></i></span>
+          <span class="footer-name">CyberGuard AI</span>
+        </div>
+        <p class="footer-tagline">
+          One AI Brain. Multiple Specialized Defenses. Unified cross-threat detection and automated containment for digital assets, payment networks, and endpoints.
+        </p>
+      </div>
+
+      <div class="footer-secondary">
+        <div class="footer-status-pill">
+          <span class="status-indicator online"></span>
+          <span>Engine v2.4.0 Active &bull; Port 5050</span>
+        </div>
+        <div class="footer-copy">
+          &copy; 2026 CyberGuard AI Defense. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
