@@ -3,14 +3,16 @@
 > **"One AI Brain. Multiple Specialized Defenses."**  
 > An AI-powered cyber defense platform that coordinates specialized engines across phishing, digital payments, and network telemetry to detect multi-stage attack chains and execute automated containment policies.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-gateway--anyone--drinking--united.trycloudflare.com-2563EB?style=for-the-badge&logo=cloudflare&logoColor=white)](https://gateway-anyone-drinking-united.trycloudflare.com)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-wireless--because--proven--poultry.trycloudflare.com-2563EB?style=for-the-badge&logo=cloudflare&logoColor=white)](https://wireless-because-proven-poultry.trycloudflare.com)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fshivaji-bhushan%2FCyberGuard-AI)
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Framework-Flask-black.svg)](https://flask.palletsprojects.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Defense%20Nodes-3%2F3%20Online-emerald.svg)]()
 
-> 🌐 **Live Interactive Website**: [https://gateway-anyone-drinking-united.trycloudflare.com](https://gateway-anyone-drinking-united.trycloudflare.com)
+> 🌐 **Live Interactive Website**: [https://wireless-because-proven-poultry.trycloudflare.com](https://wireless-because-proven-poultry.trycloudflare.com)
+
 
 ---
 
@@ -120,6 +122,20 @@ start_cyberguard.bat
 Open your browser at: **`http://127.0.0.1:5050`**
 
 ---
+
+## ☁️ Permanent 24/7 Hosting on Vercel
+
+CyberGuard AI is fully pre-configured for **Vercel** serverless Python deployment (`vercel.json` and `api/index.py` included):
+
+### 1-Click Deploy via Vercel Dashboard:
+1. Go to [vercel.com/new](https://vercel.com/new).
+2. Connect your GitHub account and select repository: **`CyberGuard-AI`**.
+3. Leave all Build & Output Settings as default (Vercel automatically detects `vercel.json` and `requirements.txt`).
+4. Click **Deploy**.
+5. Your platform will be permanently live with 24/7 uptime at `https://cyberguard-ai-xxx.vercel.app` (free forever, never goes offline when your computer closes).
+
+---
+
 
 ## 🧪 Automated Test Suite
 

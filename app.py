@@ -9,15 +9,22 @@ import sys
 import time
 from flask import Flask, render_template, request, jsonify
 
-# Ensure core package is resolvable
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+if BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
 
 from core.brain import brain_instance
 from core.phish_shield import analyze_phishing_event
 from core.upi_shield import analyze_upi_event
 from core.net_sentinel import analyze_network_event
 
-app = Flask(__name__, template_folder="templates", static_folder="static")
+app = Flask(
+    __name__,
+    template_folder=os.path.join(BASE_DIR, "templates"),
+    static_folder=os.path.join(BASE_DIR, "static"),
+    static_url_path="/static"
+)
+
 
 # In-memory incident log store (keeps last 50 incidents)
 INCIDENT_LOGS = []
